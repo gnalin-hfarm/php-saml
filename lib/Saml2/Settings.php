@@ -666,7 +666,7 @@ class OneLogin_Saml2_Settings
      */
     public function getSPMetadata()
     {
-        $metadata = OneLogin_Saml2_Metadata::builder($this->_sp, $this->_security['authnRequestsSigned'], $this->_security['wantAssertionsSigned'], null, null, $this->getContacts(), $this->getOrganization());
+        $metadata = OneLogin_Saml2_Metadata::builder($this->_sp, $this->_security['authnRequestsSigned'], $this->_security['wantAssertionsSigned'], $this->_security['validUntil'], null, $this->getContacts(), $this->getOrganization());
 
         $cert = $this->getSPcert();
 
